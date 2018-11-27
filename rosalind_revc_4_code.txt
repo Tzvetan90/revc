@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 28 11:42:44 2017
+
+@author: Stefano
+"""
+from string import maketrans
+
+with open('rosalind_revc.txt', 'r') as inp:
+    with open ('output_revc.txt', 'w') as out:
+        s=inp.read().rstrip()
+        r=s[::-1].translate(maketrans('ACGT', 'TGCA'))
+        out.write(r)
